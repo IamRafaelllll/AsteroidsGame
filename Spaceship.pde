@@ -31,7 +31,7 @@ class Spaceship extends Floater
   public double getCenterY(){
     return myCenterY;
   }
-   public void hyperspace()
+   public void hyperSpace()
  {
    myCenterX = (Math.random() *700);
    myCenterY = (Math.random()*700);
@@ -80,4 +80,5 @@ public void show(){
 
 
 }
- 
+
+
