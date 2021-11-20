@@ -1,3 +1,6 @@
+
+//your variable declarations here
+
 Spaceship cary = new Spaceship();
 boolean  aPressed, dPressed, wPressed, sPressed;
 public void setup() 
@@ -56,7 +59,7 @@ void keyPressed() {
   if (key == 'w') wPressed = true;
   if (key == 's') sPressed = true;
   if (key == 'q'){
-      cary.hyperspace();
+      cary.hyperSpace();
   }
 }
 void keyReleased() {
