@@ -5,6 +5,7 @@ Spaceship cary = new Spaceship();
 boolean  aPressed, dPressed, wPressed, sPressed;
 public void setup() 
 {
+frameRate(60);
   size(500, 500);
   noStroke();
   bob = new Star[1800];
