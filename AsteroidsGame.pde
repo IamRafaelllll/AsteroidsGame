@@ -1,6 +1,3 @@
-
-//your variable declarations here
-
 Spaceship cary = new Spaceship();
 boolean  aPressed, dPressed, wPressed, sPressed;
 public void setup() 
@@ -74,4 +71,3 @@ void keyReleased() {
 //  if(mousePressed && mouseButton == RIGHT)
 //  cary.hyperspace();
 //}
-
