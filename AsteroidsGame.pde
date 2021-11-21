@@ -1,6 +1,6 @@
 
 //your variable declarations here
-
+UFO mary = new UFO();
 Spaceship cary = new Spaceship();
 boolean  aPressed, dPressed, wPressed, sPressed;
 public void setup() 
@@ -50,6 +50,8 @@ if(sPressed){
   
   cary.move();
   cary.show();
+  mary.walk();
+  mary.show();
 }
 
 
