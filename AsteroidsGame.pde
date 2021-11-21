@@ -57,20 +57,20 @@ if(sPressed){
 
 
 void keyPressed() {
-  if (key == 'a') aPressed = true;
-  if (key == 'd') dPressed = true;
-  if (key == 'w') wPressed = true;
-  if (key == 's') sPressed = true;
-  if (key == 'q'){
+  if (key == 'a' ||key == 'A' ) aPressed = true;
+  if (key == 'd'||key == 'D') dPressed = true;
+  if (key == 'w'||key == 'W') wPressed = true;
+  if (key == 's'||key == 'S') sPressed = true;
+  if (key == 'q'|| key == 'Q'){
       cary.hyperSpace();
   }
 }
 void keyReleased() {
   
-  if (key == 'a') aPressed = false;
-  if (key == 'd') dPressed = false;
-  if (key == 'w') wPressed = false;
-  if (key == 's') sPressed = false;
+ if (key == 'a' ||key == 'A') aPressed = false;
+  if (key == 'd'||key == 'D') dPressed = false;
+  if (key == 'w'||key == 'W') wPressed = false;
+  if (key == 's'||key == 'S') sPressed = false;
 }
 
 //public void mousePressed(){
