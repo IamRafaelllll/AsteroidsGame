@@ -56,7 +56,7 @@ if(sPressed){
 
 
 
-void keyPressed() {
+public void keyPressed() {
   if (key == 'a' ||key == 'A' ) aPressed = true;
   if (key == 'd'||key == 'D') dPressed = true;
   if (key == 'w'||key == 'W') wPressed = true;
@@ -65,7 +65,7 @@ void keyPressed() {
       cary.hyperSpace();
   }
 }
-void keyReleased() {
+public void keyReleased() {
   
  if (key == 'a' ||key == 'A') aPressed = false;
   if (key == 'd'||key == 'D') dPressed = false;
