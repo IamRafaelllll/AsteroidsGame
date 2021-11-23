@@ -1,9 +1,9 @@
-class Star
+public class Star
 {
-  double myX, myY, myAngle, mySpeed, startY, startX;
-  int myColor, mySize;
+ private double myX, myY, myAngle, mySpeed, startY, startX;
+ private int myColor, mySize;
 
- Star() {
+ public Star() {
     myX = (int)(Math.random()*1000);
     myY =(int)(Math.random()*1000);
     mySpeed = Math.random()*10;
@@ -13,7 +13,7 @@ class Star
   }
 
  
-  void show() {
+ public void show() {
     frameRate(60);
     fill(myColor);
     ellipse((float)myX, (float)myY, mySize, mySize);
@@ -22,7 +22,7 @@ class Star
 
 Star [] bob;
 
-class UFO extends Star
+public class UFO extends Star
 
 {
   
@@ -35,7 +35,7 @@ class UFO extends Star
   }
   
   
-  void walk(){
+ public void walk(){
     
 if (myX>=mouseX) {
       myX= myX+(int)(Math.random()*5)-4;
@@ -69,7 +69,7 @@ if (myX>=mouseX) {
    myX = myX + (int)(Math.random()*10)-4;
     myY = myX +(int)(Math.random()*10)-4;
   }
-  void show(){
+ public void show(){
     fill(myColor);
     ellipse((float)myX, (float)myY-27, 20, 20);
     fill(255);
