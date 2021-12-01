@@ -1,7 +1,7 @@
 public class Star
 {
- private double myX, myY, myAngle, mySpeed, startY, startX;
- private int myColor, mySize;
+ public double myX, myY, myAngle, mySpeed, startY, startX;
+ public int myColor, mySize;
 
  public Star() {
     myX = (int)(Math.random()*1000);
