@@ -49,6 +49,7 @@ class Spaceship extends Floater
 public void hyperSpace()
   {
     for (int i = 0; i<cary.length; i++) {
+      if ((Math.random()*1)>=.5 ){
      cary[0].myCenterX = (Math.random()*500);
      cary[0].myCenterY = (Math.random()*500); 
      cary[1].myCenterX = cary[0].myCenterX+ 50;
@@ -59,6 +60,23 @@ public void hyperSpace()
      cary[3].myCenterY = cary[0].myCenterY ;
      cary[4].myCenterX = cary[0].myCenterX+ 200;
      cary[4].myCenterY = cary[0].myCenterY ;
+      }
+      else if ((Math.random()*1)<50){
+          cary[0].myCenterX = (Math.random()*500);
+     cary[0].myCenterY = (Math.random()*500); 
+     cary[1].myCenterX = cary[0].myCenterX;
+     cary[1].myCenterY = cary[0].myCenterY + 50;
+     cary[2].myCenterX = cary[0].myCenterX;
+     cary[2].myCenterY = cary[0].myCenterY + 100;
+     cary[3].myCenterX = cary[0].myCenterX;
+     cary[3].myCenterY = cary[0].myCenterY + 150;
+     cary[4].myCenterX = cary[0].myCenterX;
+     cary[4].myCenterY = cary[0].myCenterY + 200;
+      cary[i].myXspeed = 0;
+      cary[i].myYspeed = 0;
+
+        
+      }
       cary[i].myXspeed = 0;
       cary[i].myYspeed = 0;
     }
