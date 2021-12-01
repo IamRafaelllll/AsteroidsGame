@@ -1,7 +1,7 @@
-
 //your variable declarations here
+
 UFO mary = new UFO();
-Spaceship cary = new Spaceship();
+//Spaceship cary = new Spaceship();
 boolean  aPressed, dPressed, wPressed, sPressed;
 public void setup() 
 {
@@ -11,6 +11,11 @@ frameRate(60);
   bob = new Star[1800];
   for (int i =0; i<bob.length; i++) {
     bob[i] = new Star();
+  }             
+  cary = new Spaceship[5];
+  for (int i =0; i<cary.length; i++){
+   cary[i] = new Spaceship(250, 50*i); 
+   
   }
 }
 public void draw() 
@@ -20,37 +25,60 @@ background(0);
     frameRate(60);
     bob[i].show();
   }
+  
+  for (int i =0; i<cary.length; i++){
+   cary[i].show(); 
+  }
 if(aPressed){
-  cary.turn(-4);
-  cary.right(true);
+  for (int i = 0; i<cary.length; i++){
+  cary[i].turn(-4);
+  cary[i].right(true);
+  
+}
 }
 else{
-  cary.right(false);
+   for (int i = 0; i<cary.length; i++){
+  cary[i].right(false);
+   }
 }
+
 if(dPressed){
-  cary.turn(4);
-  cary.left(true);
+   for (int i = 0; i<cary.length; i++){
+  cary[i].turn(4);
+  cary[i].left(true);
+   }
 }
 else{
-  cary.left(false);
+   for (int i = 0; i<cary.length; i++){
+  cary[i].left(false);
+   }
 }
 if(wPressed){
-  cary.accelerate(0.15);
-  cary.boost(true);
+   for (int i = 0; i<cary.length; i++){
+  cary[i].accelerate(0.15);
+  cary[i].boost(true);
+   }
 }
 else{
-  cary.boost(false);
+   for (int i = 0; i<cary.length; i++){
+  cary[i].boost(false);
+   }
 }
 if(sPressed){
- cary.accelerate(-0.15);
+   for (int i = 0; i<cary.length; i++){
+ cary[i].accelerate(-0.15);
  
+}
 }
 
 
-  
-  cary.move();
-  cary.show();
-  mary.walk();
+   for (int i = 0; i<cary.length; i++){
+  cary[i].move();
+  cary[i].show();
+  //mary.walk();
+  //mary.show();
+   }
+    mary.walk();
   mary.show();
 }
 
@@ -62,7 +90,9 @@ public void keyPressed() {
   if (key == 'w'||key == 'W') wPressed = true;
   if (key == 's'||key == 'S') sPressed = true;
   if (key == 'q'|| key == 'Q'){
-      cary.hyperSpace();
+      for (int i = 0; i<cary.length; i++){
+      cary[i].hyperSpace();
+      }
   }
 }
 public void keyReleased() {
@@ -73,7 +103,3 @@ public void keyReleased() {
   if (key == 's'||key == 'S') sPressed = false;
 }
 
-//public void mousePressed(){
-//  if(mousePressed && mouseButton == RIGHT)
-//  cary.hyperspace();
-//}
