@@ -1,8 +1,8 @@
 class Spaceship extends Floater  
 {   
   
- private boolean moving, turnLeft, turnRight, hyperspace;
-  private int teleport;
+ public boolean moving, turnLeft, turnRight, hyperspace;
+  public int teleport;
     public Spaceship(){
      moving = turnLeft = turnRight = hyperspace = false;
       corners = 10;
