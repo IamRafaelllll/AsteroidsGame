@@ -196,7 +196,7 @@ for (int i=0; i<ufo.size(); i++) {
   if (hp<=0) {
     fatL = true;
   }
-  if (asteroids.size() ==0 && ufo.size()==0) {
+  if (asteroids.size() ==0 && ufo.size()==0 && hp>0) {
     W =true;
   }
 }
