@@ -1,8 +1,8 @@
 class Spaceship extends Floater  
 {   
   
- public boolean moving, turnLeft, turnRight, hyperspace;
-  public int teleport;
+  boolean moving, turnLeft, turnRight, hyperspace;
+  int teleport;
     public Spaceship(){
      moving = turnLeft = turnRight = hyperspace = false;
       corners = 10;
@@ -16,21 +16,6 @@ class Spaceship extends Floater
       myYspeed = 0;
       myPointDirection = 0;
     }
-    
-    public Spaceship(int x, int y){
-     moving = turnLeft = turnRight = hyperspace = false;
-      corners = 10;
-      int[] myExes = {-8, 5, 1, 7, 16, 7, 1, 5, -8, -5};
-      int[] myWhys = {-8, -6, -5, -3, 0, 3, 5, 6, 8, 0};
-      xCorners = myExes;
-      yCorners =myWhys;
-      myColor = color(255);
-      myCenterX= x;
-      myCenterY = y; 
-      myXspeed= 0;
-      myYspeed = 0;
-      myPointDirection = 0;
-    }
       public double getX(){
     return myCenterX;
   }
@@ -40,49 +25,26 @@ class Spaceship extends Floater
   public double getDirection(){
     return myPointDirection;
   }
+   public double getDirectionX(){
+    return myDirectionX; 
+  }
+   public double getDirectionY(){
+    return myDirectionY;
+  }
   public double getCenterX(){
     return myCenterX;
   }
   public double getCenterY(){
     return myCenterY;
   }
-public void hyperSpace()
-  {
-    for (int i = 0; i<cary.length; i++) {
-      if ((Math.random()*1)>=.5 ){
-     cary[0].myCenterX = (Math.random()*500);
-     cary[0].myCenterY = (Math.random()*500); 
-     cary[1].myCenterX = cary[0].myCenterX+ 50;
-     cary[1].myCenterY = cary[0].myCenterY ;
-     cary[2].myCenterX = cary[0].myCenterX+ 100;
-     cary[2].myCenterY = cary[0].myCenterY ;
-     cary[3].myCenterX = cary[0].myCenterX+ 150;
-     cary[3].myCenterY = cary[0].myCenterY ;
-     cary[4].myCenterX = cary[0].myCenterX+ 200;
-     cary[4].myCenterY = cary[0].myCenterY ;
-      }
-      else if ((Math.random()*1)<50){
-          cary[0].myCenterX = (Math.random()*500);
-     cary[0].myCenterY = (Math.random()*500); 
-     cary[1].myCenterX = cary[0].myCenterX;
-     cary[1].myCenterY = cary[0].myCenterY + 50;
-     cary[2].myCenterX = cary[0].myCenterX;
-     cary[2].myCenterY = cary[0].myCenterY + 100;
-     cary[3].myCenterX = cary[0].myCenterX;
-     cary[3].myCenterY = cary[0].myCenterY + 150;
-     cary[4].myCenterX = cary[0].myCenterX;
-     cary[4].myCenterY = cary[0].myCenterY + 200;
-      cary[i].myXspeed = 0;
-      cary[i].myYspeed = 0;
-
-        
-      }
-      cary[i].myXspeed = 0;
-      cary[i].myYspeed = 0;
-    }
-  }
-
-
+   public void hyperSpace()
+ {
+   myCenterX = (Math.random() *450);
+   myCenterY = (Math.random()*450);
+   myXspeed= 0;
+   myYspeed = 0;
+   myPointDirection = (int)(Math.random()*360);
+ }
 
 public void show(){
  
@@ -125,6 +87,11 @@ public void show(){
 
 
 }
- Spaceship [] cary;
+
+ 
+
+
+
+
 
 
