@@ -5,9 +5,10 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
   protected int[] yCorners;   
   protected int myColor;   
   protected double myCenterX, myCenterY; //holds center coordinates   
-  protected double myXspeed, myYspeed; //holds the speed of travel in the x and y directions   
+  protected double myDirectionX, myDirectionY; //holds x and y coordinates of the vector for direction of travel   
   protected double myPointDirection; //holds current direction the ship is pointing in degrees    
-
+ protected double myXspeed;
+ protected double myYspeed;
   //Accelerates the floater in the direction it is pointing (myPointDirection)   
   public void accelerate (double dAmount)   
   {          
@@ -17,14 +18,14 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
     myXspeed += ((dAmount) * Math.cos(dRadians));    
     myYspeed += ((dAmount) * Math.sin(dRadians));       
   }   
-  public void turn (double degreesOfRotation)   
+  public void turn (int nDegreesOfRotation)   
   {     
     //rotates the floater by a given number of degrees    
-    myPointDirection+=degreesOfRotation;   
+    myPointDirection+=nDegreesOfRotation;   
   }   
   public void move ()   //move the floater in the current direction of travel
   {      
-    //change the x and y coordinates by myXspeed and myYspeed       
+    //change the x and y coordinates by myDirectionX and myDirectionY       
     myCenterX += myXspeed;    
     myCenterY += myYspeed;     
 
@@ -63,9 +64,9 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
     
     //draw the polygon
     beginShape();
-    for (int Ze = 0; Ze < corners; Ze++)
+    for (int nI = 0; nI < corners; nI++)
     {
-      vertex(xCorners[Ze], yCorners[Ze]);
+      vertex(xCorners[nI], yCorners[nI]);
     }
     endShape(CLOSE);
 
