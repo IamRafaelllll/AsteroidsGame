@@ -66,7 +66,7 @@ public void draw()
 
 
 
-  System.out.println(bullets.size());
+  
 
   for (int i =0; i<bullets.size(); i++) {
     bullets.get(i).show();
