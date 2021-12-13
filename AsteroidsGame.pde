@@ -14,7 +14,7 @@ boolean  aPressed, dPressed, wPressed, sPressed, ePressed;
 
 public void setup()
 {
-  frameRate(60);
+  frameRate(120);
   size(500, 500);
   
   for (int i =0; i<bullets.size(); i++) {
