@@ -3,7 +3,7 @@ public class UFO extends Floater
 
 {
   
-  int mySize;
+  public int mySize;
   public UFO(){
     myCenterX= 175;
      myCenterY = 250;
@@ -69,9 +69,5 @@ if (myCenterX>=mouseX) {
   }
   
 }
-
-
-
-
    
 
