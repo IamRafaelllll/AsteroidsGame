@@ -141,7 +141,7 @@ public void draw()
   cary.show();
 
 aste = asteroids.size();
-//System.out.println(subA.size());
+
 
   for (int i=0; i<asteroids.size(); i++) {
     if (dist((float)cary.getX(), (float)cary.getY(), (float)asteroids.get(i).getAsteroidX(), (float)asteroids.get(i).getAsteroidY())<25) {
