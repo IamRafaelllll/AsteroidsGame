@@ -1,6 +1,7 @@
 class Asteroid extends Floater {
   private int rot;
   private double size;
+  private int type =1;
   public Asteroid() {
     corners =6;
     //    xCorners = new int [corners];
@@ -64,13 +65,6 @@ class Asteroid extends Floater {
    return size>=1; 
   }
 }
-
-
-
- 
- 
-
-
 
 
 
