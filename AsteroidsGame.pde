@@ -1,6 +1,6 @@
-ArrayList <Asteroid> asteroids= new ArrayList <Asteroid>();;
+ArrayList <Asteroid> asteroids= new ArrayList <Asteroid>();
 ArrayList <Bullet> bullets = new ArrayList<Bullet>();
-ArrayList<Subasteroid>subA = new ArrayList<Subasteroid>();
+ArrayList <Subasteroid> subA = new ArrayList <Subasteroid>();
 ArrayList<UFO> ufo = new ArrayList<UFO>();
 int hp = 100;
 int score = 0;
