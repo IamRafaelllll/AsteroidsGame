@@ -53,7 +53,7 @@ class Asteroid extends Floater {
   
    super.move();
    myPointDirection += rot;
-  
+   //System.out.println(myXspeed);
   }
   public double getAsteroidX(){
     return myCenterX;
@@ -65,6 +65,3 @@ class Asteroid extends Floater {
    return size>=1; 
   }
 }
-
-
-
