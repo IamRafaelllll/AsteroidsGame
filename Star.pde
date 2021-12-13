@@ -1,4 +1,3 @@
-
 public class Star 
 {
  public double myX, myY, myAngle, mySpeed, startY, startX;
