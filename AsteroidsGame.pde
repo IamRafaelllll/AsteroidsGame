@@ -20,7 +20,11 @@ public void setup()
   for (int i =0; i<bullets.size(); i++) {
     bullets.add(new Bullet(cary));
   }
-  
+  //noStroke();
+//for (int i =0; i<20; i++) {
+
+//    subA.add(new Subasteroid());
+//  }
   bob = new Star[1000];
 
   for (int i =0; i<bob.length; i++) {
@@ -29,7 +33,7 @@ public void setup()
   for (int i =0; i<20; i++) {
 
     asteroids.add(new Asteroid());
-   
+   //asteroids.add(new Subasteroid());
    
   }
 
