@@ -69,5 +69,3 @@ if (myCenterX>=mouseX) {
   }
   
 }
-   
-
